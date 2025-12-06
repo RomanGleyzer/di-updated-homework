@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TagsCloud.Core.Cloud;
+namespace TagsCloud.Core.Cloud.Interfaces;
 
 public interface IFontSizeProvider
 {
