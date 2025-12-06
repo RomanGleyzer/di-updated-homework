@@ -1,6 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "di", "FractalPainter/di.csproj", "{4B70F6B3-5C20-40D2-BFC9-D95C18D65DD6}"
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11222.16 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "di", "FractalPainter\di.csproj", "{4B70F6B3-5C20-40D2-BFC9-D95C18D65DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsCloud.Core", "TagsCloud.Core\TagsCloud.Core.csproj", "{67F05C9F-4768-494A-BC0D-72A3B8B26AAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsCloud.Infrastructure", "TagsCloud.Infrastructure\TagsCloud.Infrastructure.csproj", "{AAA9A8C3-64C4-4B8A-A01B-1693B33B50A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsCloud.ConsoleApp", "TagsCloud.ConsoleApp\TagsCloud.ConsoleApp.csproj", "{E18E7A9B-02CC-48BC-B481-5E9F99724F4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TagsCloud.Tests", "TagsCloud.Tests\TagsCloud.Tests.csproj", "{8DB58CF8-57CA-40B6-B519-86DF87E1AA3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +23,24 @@ Global
 		{4B70F6B3-5C20-40D2-BFC9-D95C18D65DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B70F6B3-5C20-40D2-BFC9-D95C18D65DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B70F6B3-5C20-40D2-BFC9-D95C18D65DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F05C9F-4768-494A-BC0D-72A3B8B26AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F05C9F-4768-494A-BC0D-72A3B8B26AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F05C9F-4768-494A-BC0D-72A3B8B26AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F05C9F-4768-494A-BC0D-72A3B8B26AAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA9A8C3-64C4-4B8A-A01B-1693B33B50A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA9A8C3-64C4-4B8A-A01B-1693B33B50A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA9A8C3-64C4-4B8A-A01B-1693B33B50A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA9A8C3-64C4-4B8A-A01B-1693B33B50A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E18E7A9B-02CC-48BC-B481-5E9F99724F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E18E7A9B-02CC-48BC-B481-5E9F99724F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E18E7A9B-02CC-48BC-B481-5E9F99724F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E18E7A9B-02CC-48BC-B481-5E9F99724F4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB58CF8-57CA-40B6-B519-86DF87E1AA3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB58CF8-57CA-40B6-B519-86DF87E1AA3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB58CF8-57CA-40B6-B519-86DF87E1AA3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB58CF8-57CA-40B6-B519-86DF87E1AA3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
