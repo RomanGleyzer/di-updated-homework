@@ -2,5 +2,5 @@
 
 public interface IWordsAnalyzer
 {
-    IReadOnlyCollection<WordInfo> Analyze(IEnumerable<string> words);
+    WordInfo[] Analyze(IEnumerable<string> words);
 }
