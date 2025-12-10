@@ -2,5 +2,5 @@
 
 public interface IWordProcessingStep
 {
-    string? Process(string words);
+    string? Process(string word);
 }
