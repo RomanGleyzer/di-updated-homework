@@ -8,8 +8,15 @@ public class WordsAnalyzer(IWordProcessingStep[] steps) : IWordsAnalyzer
 
     public WordInfo[] Analyze(IEnumerable<string> words)
     {
-        var processed = words.Select(ProcessWordThroughPipeline).OfType<string>();
-        return [.. processed.GroupBy(word => word).Select(group => new WordInfo(group.Key, group.Count()))];
+        var processed = words
+            .Select(ProcessWordThroughPipeline)
+            .OfType<string>();
+
+        return [.. processed
+            .GroupBy(w => w)
+            .Select(g => new WordInfo(g.Key, g.Count()))
+            .OrderByDescending(x => x.Frequency)
+            .ThenBy(x => x.Word)];
     }
 
     private string? ProcessWordThroughPipeline(string word)
@@ -18,10 +25,9 @@ public class WordsAnalyzer(IWordProcessingStep[] steps) : IWordsAnalyzer
 
         foreach (var step in _steps)
         {
+            current = step.Process(current);
             if (current == null)
                 return null;
-
-            current = step.Process(current);
         }
 
         return current;

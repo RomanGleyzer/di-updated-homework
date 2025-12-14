@@ -2,24 +2,15 @@
 
 namespace TagsCloud.Core.Words.Steps;
 
-public class BoringWordsFilterStep : IWordProcessingStep
+public sealed class BoringWordsFilterStep(IBoringWordsProvider boringWordsProvider) : IWordProcessingStep
 {
-    private readonly ISet<string> _boring;
-    private readonly IDictionary<bool, Func<string, string>> _handlers;
-
-    public BoringWordsFilterStep(IBoringWordsProvider boringWordsProvider)
-    {
-        _boring = boringWordsProvider.BoringWords;
-
-        _handlers = new Dictionary<bool, Func<string, string>>()
-        {
-            { true, word => null! },
-            { false, word => word }
-        };
-    }
+    private readonly ISet<string> _boring = boringWordsProvider.BoringWords;
 
     public string? Process(string word)
     {
-        return _handlers[_boring.Contains(word)](word);
+        if (_boring.Contains(word))
+            return null;
+
+        return word;
     }
 }

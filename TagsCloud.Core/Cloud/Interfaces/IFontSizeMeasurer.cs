@@ -2,7 +2,7 @@
 
 namespace TagsCloud.Core.Cloud.Interfaces;
 
-public interface IFontSizeProvider
+public interface IFontSizeMeasurer
 {
     Size Measure(string word, int frequency);
 }
