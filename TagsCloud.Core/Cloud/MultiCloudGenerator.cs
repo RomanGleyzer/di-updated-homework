@@ -37,8 +37,9 @@ public sealed class MultiCloudGenerator(
                 tags.Add(new Tag(info.Word, rect, info.Frequency));
             }
 
-            using var stream = outputFactory(factory.Name);
+            var stream = outputFactory(factory.Name);
             _renderer.Render(tags, imageSize, stream);
+            stream.Flush();
         }
     }
 }
