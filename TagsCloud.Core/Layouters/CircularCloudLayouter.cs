@@ -15,8 +15,6 @@ public class CircularCloudLayouter(Point center) : ICloudLayouter
 
     private double _currentAngle;
 
-    public IReadOnlyList<Rectangle> CreatedRectangles => _createdRectangles;
-
     public Rectangle PutNext(Size rectangleSize)
     {
         if (rectangleSize.Width <= 0)
